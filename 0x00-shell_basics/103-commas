@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -A1p | LC_COLLATE=C sort -d
+ls -amvp
