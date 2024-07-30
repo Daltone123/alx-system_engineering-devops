@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""
-Python script that exports data in the JSON format.
-"""
-
+#Python script that exports data in the JSON format.
 from requests import get
 from sys import argv
 import json
