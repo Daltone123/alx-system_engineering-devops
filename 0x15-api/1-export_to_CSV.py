@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
 Retrieves to-do list details for a specific employee ID.
-
 This script accepts an employee ID as a command-line input,
 retrieves the associated user data and to-do list from the
 JSONPlaceholder API, and displays the tasks completed by the
@@ -9,8 +8,6 @@ employee.
 """
 import requests
 import sys
-
-
 if __name__ == "__main__":
     # This is the Base URL for the JSONPlaceholder API
     url = "https://jsonplaceholder.typicode.com/"
@@ -32,4 +29,3 @@ if __name__ == "__main__":
 
     # Print the completed tasks one by one with indentation
     [print("\t {}".format(complete)) for complete in completed]
-
