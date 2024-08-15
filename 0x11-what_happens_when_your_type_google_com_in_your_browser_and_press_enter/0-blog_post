@@ -1,0 +1,92 @@
+What happens when you type google.com in your browser and press Enter
+
+
+
+
+
+Introduction:
+Every day, billions of people around the world perform a seemingly simple action: they type a web address into their browser’s address bar and press Enter. But what happens behind the scenes during that fraction of a second? The journey from your fingertips to a fully loaded webpage is a sophisticated ballet of technology, orchestrating a symphony of processes to deliver content securely and efficiently. Whether you’re a front-end developer, an aspiring systems engineer, or just someone curious about how the web works, understanding this journey is crucial.
+
+In this article, we’ll embark on a deep dive into the intricate web stack, exploring each step from the moment you press Enter until Google’s homepage appears on your screen. Let’s begin!
+
+1. DNS Request: The Web’s Phonebook Lookup
+When you type https://www.google.com into your browser, the first step is translating this human-readable domain name into an IP address—a unique identifier that computers use to communicate with each other. This process is handled by the Domain Name System (DNS), often referred to as the “phonebook of the internet.”
+
+How It Works:
+
+Browser Cache: Your browser first checks its own cache to see if it has recently looked up this domain.
+OS Cache: If the browser cache is empty, it asks the operating system, which has its own DNS cache.
+DNS Resolver: If neither cache has the IP address, the browser sends a query to a DNS resolver, typically provided by your ISP. This resolver may have the answer or may query other DNS servers to find the IP address associated with www.google.com.
+DNS Response: The resolver returns the IP address to your browser, allowing it to move on to the next step.
+2. TCP/IP: Establishing the Connection
+With the IP address in hand, your browser needs to establish a connection with Google’s servers. This is where the Transmission Control Protocol/Internet Protocol (TCP/IP) comes into play.
+
+The Three-Way Handshake:
+
+SYN: Your browser sends a SYN (synchronize) packet to Google’s server, asking to establish a connection.
+SYN-ACK: Google’s server responds with a SYN-ACK (synchronize-acknowledge) packet, acknowledging the request and agreeing to the connection.
+ACK: Finally, your browser sends an ACK (acknowledge) packet back to Google’s server, confirming the connection is established.
+This handshake ensures that both the client (your browser) and the server are ready to communicate, allowing data to be sent reliably.
+
+3. Firewall: The Gatekeeper
+Before any data can flow freely, it must pass through firewalls — both on your local network and at Google’s data centers. Firewalls act as gatekeepers, scrutinizing incoming and outgoing traffic based on predefined security rules.
+
+Why It Matters:
+
+Protection: Firewalls protect networks from unauthorized access and malicious attacks by filtering out harmful traffic.
+Traffic Control: They also manage traffic flow, ensuring that legitimate requests are processed while keeping out the bad actors.
+Once your request passes through these digital sentinels, it’s on its way to Google’s servers.
+
+4. HTTPS/SSL: Securing the Connection
+In today’s web, security is paramount. The “S” in HTTPS stands for “Secure,” indicating that the connection between your browser and Google’s server is encrypted using SSL/TLS (Secure Sockets Layer/Transport Layer Security).
+
+The SSL Handshake:
+
+Certificate Exchange: Google’s server sends its SSL certificate to your browser, proving its identity.
+Symmetric Encryption: Your browser and the server agree on an encryption method, creating a secure tunnel for data exchange.
+Session Key: A session key is generated and used to encrypt the data as it travels between your browser and Google’s server.
+This encryption ensures that any data exchanged — such as your search queries — is protected from eavesdroppers and tampering.
+
+5. Load-Balancer: Distributing the Load
+Google’s infrastructure is vast, with millions of servers spread across the globe. To efficiently manage this scale, Google uses load balancers — intelligent systems that distribute incoming requests across multiple servers.
+
+How Load Balancers Work:
+
+Traffic Distribution: When your request arrives at Google’s data center, the load balancer determines which server is best equipped to handle it based on factors like current load, server health, and geographical proximity.
+High Availability: By spreading traffic, load balancers ensure that no single server becomes overwhelmed, enhancing reliability and performance.
+Thanks to load balancers, even during peak times, Google’s services remain fast and responsive.
+
+6. Web Server: Serving the Content
+Once your request reaches the chosen server, the web server takes over. A web server’s job is to handle incoming HTTP requests and serve up the content you requested — in this case, Google’s homepage.
+
+The Role of Web Servers:
+
+Static and Dynamic Content: Web servers can serve static content (like images or HTML files) or dynamic content generated by backend scripts (like search results).
+Common Web Servers: Popular web servers include Apache and Nginx, known for their performance and scalability.
+The web server processes your request and prepares to send the necessary files back to your browser.
+
+7. Application Server: Processing the Logic
+Behind every powerful website is an application server — responsible for executing the backend logic that drives dynamic content.
+
+What Application Servers Do:
+
+Business Logic: The application server handles the business logic, such as processing your search query or managing user sessions.
+Interaction with Databases: It interacts with databases to fetch or store data, ensuring that dynamic content is up-to-date and personalized.
+In Google’s case, the application server processes your search query and interacts with vast databases to deliver the most relevant results.
+
+8. Database: Storing and Retrieving Data
+At the heart of dynamic web applications are databases — systems that store, retrieve, and manage data.
+
+Types of Databases:
+
+Relational Databases: These use SQL to query structured data stored in tables. Examples include MySQL and PostgreSQL.
+NoSQL Databases: These handle unstructured or semi-structured data, offering flexibility and scalability. Examples include MongoDB and Cassandra.
+Google’s databases are optimized to handle massive amounts of data, ensuring that your search results are delivered in milliseconds.
+
+Conclusion:
+The next time you type https://www.google.com and hit Enter, you’ll know that what seems like a simple action is actually a complex dance of technology. From DNS lookups to SSL handshakes, load balancing to database queries, every step is meticulously orchestrated to deliver a fast, secure, and reliable web experience.
+
+Whether you’re a software engineer or just someone fascinated by how things work, understanding this process is not only intellectually rewarding but also essential in today’s digital age. The web is an intricate tapestry of interconnected systems, and each request you make is a thread that weaves through this digital fabric.
+
+Call to Action:
+If you found this exploration of the web stack insightful, consider sharing it with your network. Follow me for more deep dives into the technology that powers our digital world. Have questions or thoughts? Drop them in the comments below — I’d love to hear from you!
