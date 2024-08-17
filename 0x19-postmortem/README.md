@@ -2,6 +2,8 @@
 
 # The Great Database Debacle: When Replication Went on a Coffee Break
 
+![Technical Diagram](./postmorterm_technical.webp)
+
 ##Issue Summary
 ### Duration of the Outage:
 The outage occurred on August 17, 2024, lasting for 2 hours and 15 minutes, from 10:30 AM to 12:45 PM UTC.
